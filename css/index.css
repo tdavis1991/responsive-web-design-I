@@ -76,8 +76,14 @@ h1, h2, h3, h4, h5 {
     }
 }
 
+@media (max-width: 500px) {
+    .container {
+        width: 500px;
+    }
+}
+
  header .logo {
-  font-size: 300px;
+   font-size: 300px;
 } 
 
 header nav {
@@ -109,13 +115,39 @@ header nav a:last-child {
 header .top-nav {
   margin-top: 25px;
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   justify-content: space-evenly;
 }
 
 @media (max-width: 800px) {
     header .top-nav {
         flex-flow: row wrap-reverse;
+    }
+}
+
+@media (max-width: 500px) {
+    header .top-nav {
+        flex-flow: column-reverse;
+        justify-content: center;
+        width: 100%;
+    }
+    header .top-nav nav {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    } 
+
+    .top-nav nav a {
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        padding: 20px 0px;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    header .top-nav .logo {
+        width: 50%;
+        margin: 0 auto;
     }
 }
 
@@ -134,8 +166,7 @@ header .top-section {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* justify-content: space-around; */
-        /* align-content: center; */
+        justify-content: space-around;
         margin: 0 auto;
     }
 
@@ -148,9 +179,11 @@ header.top-section .top-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* vertical-align: top;
+  /* vertical-align: center;
   text-align: center; */
 }
+
+
 
 .top-section .top-box button {
   background-color: white;
@@ -158,6 +191,20 @@ header.top-section .top-box {
   /* margin-left: 16px; */
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+@media (max-width: 800px)  {
+    .top-section .top-box button{
+        padding: 5px 20px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-section .top-box button {
+        width: 50%;
+    }
 }
 
 .top-section .top-box button :hover {
@@ -173,6 +220,16 @@ header .top-section .top-img {
   margin-bottom: 30px;
 }
 
+@media (max-width: 500px) {
+    .container .mid-text {
+        flex-flow: column;
+        width: 100%;
+    }
+    .container .middle-img {
+        width: 100%;
+    }
+}
+
 .container .mid-text .FA{
   display: flex;
   flex-direction: column;
@@ -182,6 +239,13 @@ header .top-section .top-img {
 .container .bottom-text {
   display: flex;
   border-bottom: 1px solid black;
+}
+
+@media (max-width: 500px) {
+    .container .bottom-text {
+        flex-flow: column;
+        width: 100%;
+    }
 }
 
 .container .bottom-text .spv {
