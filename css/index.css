@@ -209,12 +209,19 @@ header.top-section .top-box {
     flex-flow: column;
     vertical-align: top;
     text-align: center;
+    justify-content: center;
     /* width: 300px; */
 }
 
 .top-section .top-box button {
-    margin-left: 74px;
-}
+    margin-left: 55px;
+    margin-right: 58px;
+} 
+
+/* .top-section .top-box {
+    vertical-align: top;
+    text-align: center;
+} */
 
 .top-section .top-box button {
   background-color: white;
